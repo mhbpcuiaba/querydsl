@@ -7,4 +7,5 @@ import javax.persistence.Id
 @Entity
 data class Customer constructor(
         @field:Id var id: Long,
-        @field:Column var name: String)
+        @field:Column var name: String,
+        @field:Column var gender: Char)

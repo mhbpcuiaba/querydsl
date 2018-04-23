@@ -18,12 +18,16 @@ interface CustomerRepository : JpaRepository<Customer, Long>,
 
     @JvmDefault
     override fun customize(bindings: QuerydslBindings, qCustomer: QCustomer) {
-        bindings.bind(String::class.java).all(
-                MultiValueBinding<StringPath, String> { path, values ->
-                    BooleanBuilder().apply {
-                        values?.forEach { this.or(path?.containsIgnoreCase(it)) }
-                    }
-                })
+
+        bindings.bind(String::class.java).all { path:StringPath, values ->
+            BooleanBuilder().apply {
+                values.forEach { this.or(path.containsIgnoreCase(it)) }
+            }
+        }
+
+        bindings.bind(QCustomer.customer.gender).first { path, gender
+            -> path.eq(gender.toUpperCase()) }
+
     }
 
 }

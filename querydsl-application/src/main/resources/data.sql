@@ -1,6 +1,6 @@
 
-insert into customer(id, name) values (1, 'Pedro');
-insert into customer(id, name) values (2, 'Paulo');
-insert into customer(id, name) values (3, 'Helena');
-insert into customer(id, name) values (4, 'Maria');
-insert into customer(id, name) values (5, 'Julia');
+insert into customer(id, name, gender) values (1, 'Pedro', 'M');
+insert into customer(id, name, gender) values (2, 'Paulo', 'M');
+insert into customer(id, name, gender) values (3, 'Helena', 'F');
+insert into customer(id, name, gender) values (4, 'Maria', 'F');
+insert into customer(id, name, gender) values (5, 'Julia', 'F');

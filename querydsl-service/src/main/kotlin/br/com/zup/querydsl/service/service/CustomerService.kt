@@ -30,5 +30,6 @@ class CustomerServiceImpl constructor(private val repository: CustomerRepository
                     .map (::toRepresentation )
 
 
-    private fun toRepresentation(customer: Customer) = CustomerRepresentation(customer.id, customer.name)
+    private fun toRepresentation(customer: Customer)
+            = CustomerRepresentation(customer.id, customer.name, customer.gender)
 }
