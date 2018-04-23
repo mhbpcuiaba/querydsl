@@ -7,14 +7,22 @@ import org.springframework.context.annotation.ComponentScan
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories
 
 @SpringBootApplication
-
-@ComponentScan(basePackages = ["br.com.zup.querydsl"])
-@EnableJpaRepositories(basePackages = ["br.com.zup.querydsl.service.repository"])
-@EntityScan(basePackages = ["br.com.zup.querydsl.domain"])
+@ComponentScan("br.com.zup.querydsl")
+@EnableJpaRepositories("br.com.zup.querydsl.service.repository")
+@EntityScan("br.com.zup.querydsl.domain")
 class QuerydslApplication
-
 
 fun main(args: Array<String>) {
     SpringApplication.run(QuerydslApplication::class.java, *args)
-
 }
+
+
+
+
+
+
+
+
+
+
+
