@@ -21,8 +21,11 @@ class CustomerController constructor(private val customerService: CustomerServic
     fun findOne(id: Long) = customerService.findOne(id)
 
     @GetMapping
-    fun findByPredicate(@QuerydslPredicate(root = Customer::class) predicate: Predicate?,
+    fun findByPredicate(@QuerydslPredicate(root = Customer::class)
+                        predicate: Predicate?,
                         pageable: Pageable?): Page<CustomerRepresentation> =
             customerService.findByPredicate(predicate, pageable)
+
+
 
 }

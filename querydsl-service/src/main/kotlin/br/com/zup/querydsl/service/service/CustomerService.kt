@@ -31,6 +31,7 @@ class CustomerServiceImpl constructor(private val repository: CustomerRepository
             this.repository.findOne(id)
                     .let(::toRepresentation)
 
+
     override fun findByPredicate(predicate: Predicate?, pageable: Pageable?): Page<CustomerRepresentation> =
             this.repository.findAll(predicate, pageable)
                         .map(::toRepresentation)
@@ -42,4 +43,5 @@ class CustomerServiceImpl constructor(private val repository: CustomerRepository
 
     private fun toRepresentation(customer: Customer)
             = CustomerRepresentation(customer.id, customer.name, customer.gender)
+
 }
