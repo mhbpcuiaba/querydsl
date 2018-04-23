@@ -1,7 +1,7 @@
 package br.com.zup.querydsl.domain
 
-import javax.persistence.Entity
 import javax.persistence.Column
+import javax.persistence.Entity
 import javax.persistence.Id
 
 @Entity

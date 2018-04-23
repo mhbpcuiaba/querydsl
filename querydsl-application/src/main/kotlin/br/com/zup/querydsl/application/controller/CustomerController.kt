@@ -1,7 +1,7 @@
 package br.com.zup.querydsl.application.controller
 
-import br.com.zup.querydsl.service.service.CustomerService
 import br.com.zup.querydsl.domain.Customer
+import br.com.zup.querydsl.service.service.CustomerService
 import br.com.zup.querydsl.service.service.representation.CustomerRepresentation
 import com.querydsl.core.types.Predicate
 import org.springframework.data.domain.Page
